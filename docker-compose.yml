@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  pyspark-notebook:
+    container_name: pyspark-notebook
+    image: jupyter/pyspark-notebook:latest
+    restart: always
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    ports:
+      - 8888:8888
