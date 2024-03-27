@@ -7,5 +7,8 @@ services:
     restart: always
     environment:
       - JUPYTER_ENABLE_LAB=yes
+    volumes:
+      - C:/Users/joana/Documents/GitHub/BigData:/home/jovyan/work
     ports:
+      - 4040:4040
       - 8888:8888
