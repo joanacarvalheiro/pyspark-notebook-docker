@@ -5,10 +5,17 @@ services:
     container_name: pyspark-notebook
     image: jupyter/pyspark-notebook:latest
     restart: always
+    user: root
     environment:
       - JUPYTER_ENABLE_LAB=yes
+      - GRANT_SUDO=yes
     volumes:
       - C:/Users/joana/Documents/GitHub/BigData:/home/jovyan/work
     ports:
       - 4040:4040
       - 8888:8888
+    networks:
+      - my_network
+
+networks:
+  my_network:
